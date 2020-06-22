@@ -2,27 +2,29 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.ArrayList;
 
-public class FileIoMiniExercise {
+public class FileIoMiniExercise extends Instructor {
     public static void main(String[] args) {
 
         // TODO: define the path to the instructor-names.txt file
-
+        Path instructorNames = Paths.get("src", "instructor-names.txt");
 
         // TODO: uncomment the following variable declarations
-//        List<Instructor> instructors;
-//        List<String> names = new ArrayList<>();
-
         // TODO: read the contents of the instructor-names.txt file and store the list of strings into the 'names' variable
-
-
         // TODO: assign the 'instructors' variable a list of Instructor objects with names matching the list of strings/names from the text file (the Instructor class has a helpful method for this)
 
+         String[] indName = {"Sophie", "Justin", "Fred", "Trant", "Vivian"};
+        List<String> names = Arrays.asList(indName);
+        List<Instructor> instructors = nameStringsToInstructors(names);
 
         // TODO: greet all instructors by their names
-
+                for(String name : names){
+                    System.out.println("Hello, " + name);
+                }
+//        System.out.println(instructors);
 
         // TODO: change "Fred" to "David" in the list of Instructor objects
 

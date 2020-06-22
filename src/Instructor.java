@@ -14,6 +14,8 @@ public class Instructor {
         this.name = name;
     }
 
+    Instructor(){};
+
     /**
      * This method takes in a list of Instructor objects and returns a list of name strings
      * @param instructors is a list of Instructor objects
